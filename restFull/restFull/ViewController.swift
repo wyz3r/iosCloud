@@ -8,10 +8,83 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
+    
+    
+    
+    @IBOutlet weak var busqueda: UITextField!
+    
+    @IBOutlet weak var campo: UITextView!
+    func sincrono (libro: String)
+    {
+        let url = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:\(libro)"
+        let urls = NSURL(string :url)
+        if (urls != nil )
+        {
+            
+            
+            let datos:NSData? = NSData(contentsOfURL: urls!)
+            print(datos!)
+            let texto = NSString(data:datos!, encoding: NSUTF8StringEncoding)
+            campo.text = texto! as String
+
+        }
+        else
+        {
+            let error :String = "Error"
+            print("\(error)")
+            campo.text = error
+        }
+       
+        print("cadena de \(libro)")
+       
+    }
+    
+   
+    
+
+    @IBAction func texEnding (sender: UITextField)
+    {
+        
+            sender.resignFirstResponder()//desaparecer el teclado al dar enter
+        
+    }
+    
+    @IBAction func busqueda (sender: UITextField)
+    {
+        print("entra la cadena \(busqueda.text!)")
+       
+        sincrono(busqueda.text!)
+        
+        
+
+    }
+    
+    @IBAction func tabvakcground (sender: UIControl)
+    {
+        busqueda.resignFirstResponder()
+        campo.resignFirstResponder()
+    }
+    
+    
+    
+ 
+    
+  
+    @IBAction func limpiarPantalla(sender: AnyObject) {
+        campo.text = " "
+        busqueda.text = " "
+    }
+   
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "tablon2")
+        self.view.insertSubview(backgroundImage, atIndex: 0)
+        
+        busqueda.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
