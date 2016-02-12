@@ -32,9 +32,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
         }
         else
         {
-            let error :String = "Error"
-            print("\(error)")
-            campo.text = error
+            let alerta = UIAlertController(title: "Error", message: "Ese libro no existe", preferredStyle: UIAlertControllerStyle.Alert)
+            alerta.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+            presentViewController(alerta, animated: true, completion: nil)
+            print("error")
+            
         }
        
         print("cadena de \(libro)")
