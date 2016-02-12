@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biblioteca  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKL-Pe-ZSr">
-                                <rect key="frame" x="227" y="28" width="146" height="36"/>
+                                <rect key="frame" x="227" y="68" width="146" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="IO4-wI-fMZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.28289298585651224" green="0.54436083948817926" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.97686927359999998" green="0.97686927359999998" blue="0.97686927359999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.7386639288241178" green="0.79330228180163032" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vE1-Dx-cyo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vE1-Dx-cyo">
                                 <rect key="frame" x="162" y="205" width="277" height="305"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -54,11 +54,11 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3kZ-ym-i7T" firstAttribute="top" secondItem="hKL-Pe-ZSr" secondAttribute="bottom" constant="71" id="2qj-4p-Rtr"/>
+                            <constraint firstItem="3kZ-ym-i7T" firstAttribute="top" secondItem="hKL-Pe-ZSr" secondAttribute="bottom" constant="31" id="2qj-4p-Rtr"/>
                             <constraint firstItem="3kZ-ym-i7T" firstAttribute="leading" secondItem="hKL-Pe-ZSr" secondAttribute="leading" constant="-28" id="6gT-15-GvO"/>
-                            <constraint firstItem="hKL-Pe-ZSr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6wY-vQ-o0u"/>
+                            <constraint firstItem="hKL-Pe-ZSr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="6wY-vQ-o0u"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vE1-Dx-cyo" secondAttribute="bottom" constant="90" id="7yY-xS-UZx"/>
                             <constraint firstItem="vE1-Dx-cyo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IgW-DQ-Jxg"/>
                             <constraint firstItem="vE1-Dx-cyo" firstAttribute="top" secondItem="oDE-iC-g4H" secondAttribute="bottom" constant="8" symbolic="YES" id="O5Z-yp-q6g"/>

@@ -27,6 +27,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             print(datos!)
             let texto = NSString(data:datos!, encoding: NSUTF8StringEncoding)
             campo.text = texto! as String
+            
 
         }
         else
@@ -67,7 +68,15 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     
     
+    func truefalse () ->Bool
+    {
+        
+        return true
+    }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
  
     
   
@@ -83,6 +92,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
         backgroundImage.image = UIImage(named: "tablon2")
         self.view.insertSubview(backgroundImage, atIndex: 0)
+        self.view.backgroundColor = UIColor.whiteColor();
         
         busqueda.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
