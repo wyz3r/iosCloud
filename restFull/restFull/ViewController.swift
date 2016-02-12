@@ -31,11 +31,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
 
         }
         else
-        {
-            let alerta = UIAlertController(title: "Error", message: "Ese libro no existe", preferredStyle: UIAlertControllerStyle.Alert)
+        {   //codigo para crear un alert
+            let alerta = UIAlertController(title: "Error", message: "No encontrado", preferredStyle: UIAlertControllerStyle.Alert)
             alerta.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
             presentViewController(alerta, animated: true, completion: nil)
+            //codigo para crear un alert
             print("error")
+            
             
         }
        
